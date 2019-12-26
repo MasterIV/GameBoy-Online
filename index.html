@@ -4,29 +4,38 @@
 <head>
     <link rel="stylesheet" href="css/main.css"/>
 
+    <script type="text/javascript" src="js/other/resize.js"></script>
+    <script type="text/javascript" src="js/other/resampler.js"></script>
+    <script type="text/javascript" src="js/other/swfobject.js"></script>
+    <script type="text/javascript" src="js/other/XAudioServer.js"></script>
+
     <script type="text/javascript" src="js/GameBoyCore.js"></script>
     <script type="text/javascript" src="js/GameBoyIO.js"></script>
     <script type="text/javascript" src="js/Main.js"></script>
+
+    <meta charset="utf-8" />
 
     <title>GameBoy Online</title>
 </head>
 
 <body>
     <div id="gfx">
-        <canvas id="mainCanvas"></canvas>
+        <canvas id="mainCanvas" style="width: 480px; height: 432px;"></canvas>
     </div>
 
     <ul>
-        <li>X/J are A.</li>
-        <li>Z/Y/Q are B.</li>
-        <li>Shift is Select.</li>
-        <li>Enter is Start.</li>
-        <li>The d-pad is the control pad.</li>
-        <li>The escape key (esc) allows you to get in and out of fullscreen mode.</li>
+        <li><b>Button A:</b> X/J</li>
+        <li><b>Button B:</b> Z/Y/Q</li>
+        <li><b>Select:</b> Shift</li>
+        <li><b>Start:</b> Enter</li>
     </ul>
 
-    <div id="fullscreenContainer">
-        <canvas id="fullscreen" class="maximum"></canvas>
-    </div>
+    <i>Based on <a href="https://github.com/taisel/GameBoy-Online" target="_blank">https://github.com/taisel/GameBoy-Online</a></i>
+
+    <script>
+        window.onload = function() {
+            loadGame("rom/PostBot.gb");
+        }
+    </script>
 </body>
 </html>
